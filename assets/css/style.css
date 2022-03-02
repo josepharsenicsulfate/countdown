@@ -62,7 +62,7 @@ body{
     grid-template-columns: repeat(4, 1fr);
 }
 
-.container.countdown .time{
+.container.countdown .timer{
     font-size: 7px;
     letter-spacing: 2px;
 
