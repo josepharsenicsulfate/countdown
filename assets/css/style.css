@@ -28,6 +28,8 @@ body{
 }
 
 .main{
+    width: 100vw;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -49,6 +51,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 .container.title h1{
@@ -60,6 +63,7 @@ body{
 .container.countdown{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
 }
 
 .container.countdown .timer{
@@ -69,9 +73,44 @@ body{
     color: var(--grayish-blue-);
 }
 
+.container.countdown .timer h1{
+    margin: 0;
+    vertical-align: middle;
+    font-size: 36px;
+    color: var(--soft-red-);
+    letter-spacing: -1px;
+
+    background-color: var(--dark-des-blue-);
+    border-radius: 5px;
+    box-shadow: 0px 7px 0px -2px var(--very-dark-blue-);
+}
+
 .container.links{
-    
     gap: 25px;
+}
+
+.bg{
+    width: 100vw;
+    height: 100vh;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+.bg.mountain-svg{
+    background-image: url('../images/pattern-hills.svg');
+    top: -850px;
+    left: 0;
+    z-index: -1;
+}
+
+.bg.star-svg{
+    background-image: url('../images/bg-stars.svg');
+    top: -584px;
+    left: 0;
+    z-index: -2;
 }
 
 .attribution { font-size: 11px; text-align: center; }
