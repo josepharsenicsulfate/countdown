@@ -7,7 +7,7 @@
     --dark-des-blue-: hsl(236, 21%, 26%);
     --very-dark-blue-: hsl(235, 16%, 14%);
     --very-dark-blue-blk-: hsl(234, 17%, 12%);
-    --mountain-purple-: #2F2439
+    --mountain-purple-: #2a1f35;
 
 }
 
@@ -25,11 +25,11 @@ body{
     background-image: linear-gradient(var(--very-dark-blue-), var(--mountain-purple-));
     background-position: center;
     background-repeat: no-repeat;
+
+    overflow-x: hidden;
 }
 
 .main{
-    width: 100vw;
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -52,6 +52,10 @@ body{
     justify-content: center;
     align-items: center;
     
+}
+
+.container.title{
+    padding-top: 20vh;
 }
 
 .container.title h1{
@@ -77,7 +81,7 @@ body{
     margin: 0;
     vertical-align: middle;
     font-size: 36px;
-    color: var(--soft-red-);
+    
     letter-spacing: -1px;
 
     background-color: var(--dark-des-blue-);
@@ -85,8 +89,23 @@ body{
     box-shadow: 0px 7px 0px -2px var(--very-dark-blue-);
 }
 
+.soft-red{
+    color: var(--soft-red-);
+}
+
+.blink{
+    color: var(--soft-red-);
+    transition: 0.5s ease;
+}
+
 .container.links{
     gap: 25px;
+    padding-top: 40vh;
+}
+
+.container.links a svg:hover path{
+    fill: var(--soft-red-);
+    transition: 0.3s ease;
 }
 
 .bg{
@@ -100,18 +119,48 @@ body{
 }
 
 .bg.mountain-svg{
+    height: 20vh;
     background-image: url('../images/pattern-hills.svg');
-    top: -850px;
+    top: -746px;
     left: 0;
     z-index: -1;
 }
 
 .bg.star-svg{
+    width: 100vw;
     background-image: url('../images/bg-stars.svg');
-    top: -584px;
+    top: -618px;
     left: 0;
     z-index: -2;
 }
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
+
+@media (min-width: 320px){
+    .bg.mountain-svg{
+        top: -728px;
+    }
+}
+
+@media (min-width: 768px){
+    .bg.mountain-svg{
+        height: 25vh;
+    }
+
+    .main > * {
+        width: 50%;
+    }
+}
+
+@media (min-width: 1024px){
+    .bg.mountain-svg{
+        height: 30vh;
+    }
+}
+
+@media (min-width: 1440px){
+    .bg.mountain-svg{
+        height: 35vh;
+    }
+}
