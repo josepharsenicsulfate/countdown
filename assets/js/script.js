@@ -1,4 +1,4 @@
-let launchDateStr = "March 4, 2022 11:27:55"
+let launchDateStr = "May 21, 2022 11:27:55"
 let launchDate = new Date(launchDateStr).getTime()
 
 const timer = document.getElementsByClassName('timer')
